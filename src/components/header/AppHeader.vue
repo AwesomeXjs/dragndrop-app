@@ -23,7 +23,7 @@ nav {
   background-color: var(--var-background-card);
   display: flex;
   justify-content: space-around;
-  max-width: 80%;
+  max-width: 50%;
   margin: 0 auto;
   padding: 10px 10px 5px 10px;
   border-radius: var(--var-border-radius);

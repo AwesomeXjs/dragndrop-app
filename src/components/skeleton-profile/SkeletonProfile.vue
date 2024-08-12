@@ -4,6 +4,7 @@
   <div class="skeleton-profile">
     <img class="skeleton-profile_avatar" src="@/assets/avatar.svg" alt="skeleton_avatar" />
     <div class="skeleton-profile_title"></div>
+    <div class="skeleton-profile_text_1"></div>
     <div v-for="i in 6" :class="`skeleton-profile_text_${i + 1}`" :key="i"></div>
   </div>
 </template>
@@ -24,7 +25,7 @@
   }
   &_title {
     min-width: 190px;
-    min-height: 25px;
+    min-height: 26px;
     margin: 22px auto;
     border-radius: var(--var--skeleton-border-radius);
     background: var(--var-bcc-gradient);
@@ -49,10 +50,12 @@
     &_5 {
       @include skeleton_text;
       max-width: 140px;
+      margin-bottom: 24px;
     }
     &_6 {
       @include skeleton_text;
       max-width: 80px;
+      margin-bottom: 24px;
     }
   }
 }
