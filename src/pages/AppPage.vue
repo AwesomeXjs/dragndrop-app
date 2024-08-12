@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import SkeletonProfile from '@/components/skeleton-profile/SkeletonProfile.vue'
-import { useDragNDropStore } from '@/store/useStore'
-import AppTable from '@/pages/AppTable.vue'
-
-const store = useDragNDropStore()
+import AppTable from '@/components/app-table/AppTable.vue'
+import AppBanner from '@/components/banner/AppBanner.vue'
 </script>
 
 <template>
@@ -13,6 +11,7 @@ const store = useDragNDropStore()
     </div>
     <AppTable />
   </div>
+  <AppBanner />
 </template>
 
 <style scoped lang="scss">
@@ -32,5 +31,15 @@ const store = useDragNDropStore()
   min-height: 500px;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+@keyframes skeleton_animation {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

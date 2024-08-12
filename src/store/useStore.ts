@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import item1 from '@/assets/item1.svg'
 import item2 from '@/assets/item2.svg'
@@ -22,11 +22,18 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
   const item_content_show = ref<boolean>(false)
   const item_del_confirm_show = ref<boolean>(false)
   const number_of_del_item = ref<number>(0)
+  const banner_show = ref<boolean>(true)
+
+  const itemsInLocalStore = localStorage.getItem('items')
+
+  if (itemsInLocalStore) {
+    items.value = JSON.parse(itemsInLocalStore)
+  }
 
   const onDragStart = (e: DragEvent, item: IItem) => {
     if (e.dataTransfer && e.target) {
       // @ts-ignore
-      e.target.style.background = '#2f2f2f'
+      e.target.style.background = 'var(--var-background-card)'
       // @ts-ignore
       e.target.style.border = '1px solid var(--var-border)'
       e.dataTransfer.dropEffect = 'move'
@@ -57,6 +64,10 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
     item_content_show.value = true
   }
 
+  const showBanner = () => {
+    banner_show.value = true
+  }
+
   const del_number = (item: IItem) => {
     const current_item = items.value.find((i) => i.id === item.id)
     if (current_item) {
@@ -68,6 +79,14 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
       item_content_show.value = false
     }
   }
+
+  watch(
+    () => items,
+    (state) => {
+      localStorage.setItem('items', JSON.stringify(state.value))
+    },
+    { deep: true }
+  )
   return {
     items,
     current_item,
@@ -77,6 +96,8 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
     onDragStart,
     onDrop,
     showContent,
-    del_number
+    del_number,
+    showBanner,
+    banner_show
   }
 })

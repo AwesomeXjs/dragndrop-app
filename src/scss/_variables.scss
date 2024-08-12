@@ -1,8 +1,6 @@
 :root {
-	--var-background-opacity: rgba(0, 0, 0, 0.7);
 	--var-text: white;
 	--var-cancel-button: black;
-	--var-special-text: rgb(145, 144, 144);
 	--var-border: #4D4D4D;
 
 	--var-background-main: #1D1D1D;
@@ -11,8 +9,14 @@
 	--var-background-cancel-button: #FFFFFF;
 	--var-bcc-gradient: linear-gradient(to left, #333, #3c3c3c 0%, #444444 50%, #333333 100%);
 
+	--var-items-drag-hover: #2f2f2f;
+
 	--var-btn-danger: #FA7272;
 	--var-btn-primary: #FFFFFF;
+
+	--var--skeleton-border-radius: 8px;
+	--var-skeleton-text-border-radius: 4px;
+	--var-radius-style: 0 7px;
 
 	--var-regular-text: 16px;
 	--var-small-text: 14px;
@@ -21,9 +25,7 @@
 	--var-transition: 0.25s ease-out;
 	--var-index: calc(1vw + 1vh);
 	--var-border-radius: 12px;
-	--var--skeleton-border-radius: 8px;
-	--var-skeleton-text-border-radius: 4px;
-	--var-radius-style: 0 7px;
+
 
 
 
@@ -31,8 +33,18 @@
 
 [light] {
 	--var-background-main: #FFFFFF;
-	--var-background-card: #918f8f;
+	--var-background-card: white;
 	--var-text: black;
+	--var-items-drag-hover: #b6e9f4;
+
+	--var-border: #4D4D4D;
+
+	--var-background-delete-button: #fa7272;
+
+	--var-bcc-gradient: linear-gradient(to left, #333, #3c3c3c 0%, #444444 50%, #333333 100%);
+
+	--var-btn-danger: #FA7272;
+	--var-btn-primary: #FFFFFF;
 }
 
 

@@ -10,6 +10,8 @@
 </template>
 
 <style scoped lang="scss">
+@import '@/scss/_animations.scss';
+
 @mixin skeleton_text {
   border-radius: var(--var-skeleton-text-border-radius);
   min-height: 10px;
@@ -57,18 +59,6 @@
       max-width: 80px;
       margin-bottom: 24px;
     }
-  }
-}
-
-@keyframes skeleton_animation {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 </style>
