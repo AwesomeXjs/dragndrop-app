@@ -39,6 +39,8 @@ const store = useDragNDropStore()
 </template>
 
 <style scoped lang="scss">
+@import '@/scss/_variables.scss';
+
 .app_table {
   position: relative;
   background-color: var(--var-border);
@@ -104,5 +106,36 @@ const store = useDragNDropStore()
   z-index: 10;
   cursor: pointer;
   transition: 0.3s linear;
+}
+
+// MOBILE
+
+@include tablet() {
+  // 840px--
+  .app_table {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@include mobile() {
+  // 568px--
+  .app_table {
+    width: 90%;
+    justify-content: space-around;
+    background-color: var(--var-background-card);
+    border: none;
+  }
+  .droppable {
+    width: 20%;
+    border: 1px solid var(--var-border);
+  }
+}
+
+@include mobile-s() {
+  // 414px--
+  .droppable {
+    width: 26%;
+    border: 1px solid var(--var-border);
+  }
 }
 </style>

@@ -12,6 +12,7 @@ const store = useDragNDropStore()
 </template>
 
 <style scoped lang="scss">
+@import '@/scss/_variables.scss';
 @import '@/scss/_animations.scss';
 
 .banner-skeleton {
@@ -28,5 +29,19 @@ const store = useDragNDropStore()
   background: var(--var-bcc-gradient);
   border-radius: var(--var-border-radius);
   animation: skeleton_animation 1s linear infinite alternate;
+}
+
+@include tablet() {
+  // 840px--
+  .banner-skeleton {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@include mobile() {
+  // 568px--
+  .banner-skeleton {
+    width: 90%;
+  }
 }
 </style>

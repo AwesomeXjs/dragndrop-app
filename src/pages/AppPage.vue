@@ -15,6 +15,8 @@ import AppBanner from '@/components/banner/AppBanner.vue'
 </template>
 
 <style scoped lang="scss">
+@import '@/scss/_variables.scss';
+
 .profile {
   background-color: var(--var-background-card);
   padding: 18px 14px 0 14px;
@@ -40,6 +42,23 @@ import AppBanner from '@/components/banner/AppBanner.vue'
   }
   100% {
     opacity: 1;
+  }
+}
+
+// Mobile
+
+@include tablet() {
+  // 840px--
+  .profile {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@include mobile() {
+  // 568px--
+  .profile {
+    width: 90%;
   }
 }
 </style>
