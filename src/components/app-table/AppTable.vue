@@ -122,7 +122,7 @@ const store = useDragNDropStore()
   .app_table {
     width: 90%;
     justify-content: space-around;
-    background-color: var(--var-background-card);
+    background-color: transparent;
     border: none;
   }
   .droppable {
