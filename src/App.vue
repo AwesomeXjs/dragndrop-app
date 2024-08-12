@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import { ref } from 'vue'
-import AppHeader from '@/components/header/AppHeader.vue'
+import AppPage from '@/pages/AppPage.vue'
 
 const theme = ref<'light' | 'dark'>('light')
 
@@ -17,9 +16,8 @@ const changeTheme = () => {
 </script>
 
 <template>
-  <AppHeader />
   <div class="container">
-    <RouterView />
+    <AppPage />
   </div>
 </template>
 

@@ -1,14 +1,15 @@
 :root {
-	--var-accent: #398dc0;
-	--var-accent-light: #59a7d8;
-	--var-accent-dark: #2c719c;
 	--var-background-opacity: rgba(0, 0, 0, 0.7);
 	--var-text: white;
+	--var-cancel-button: black;
 	--var-special-text: rgb(145, 144, 144);
 	--var-border: #4D4D4D;
 
 	--var-background-main: #1D1D1D;
 	--var-background-card: #262626;
+	--var-background-delete-button: #fa7272;
+	--var-background-cancel-button: #FFFFFF;
+	--var-bcc-gradient: linear-gradient(to left, #333, #3c3c3c 0%, #444444 50%, #333333 100%);
 
 	--var-btn-danger: #FA7272;
 	--var-btn-primary: #FFFFFF;
@@ -24,7 +25,7 @@
 	--var-skeleton-text-border-radius: 4px;
 	--var-radius-style: 0 7px;
 
-	--var-bcc-gradient: linear-gradient(to left, #333, #3c3c3c 0%, #444444 50%, #333333 100%);
+
 
 }
 
