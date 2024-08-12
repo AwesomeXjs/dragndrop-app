@@ -25,7 +25,9 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
 
   const onDragStart = (e: DragEvent, item: IItem) => {
     if (e.dataTransfer && e.target) {
+      // @ts-ignore
       e.target.style.background = '#2f2f2f'
+      // @ts-ignore
       e.target.style.border = '1px solid var(--var-border)'
       e.dataTransfer.dropEffect = 'move'
       e.dataTransfer.effectAllowed = 'move'
