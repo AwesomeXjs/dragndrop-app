@@ -74,7 +74,11 @@ export const useDragNDropStore = defineStore('DragNDropStore', () => {
       if (current_item.reactive_number === 0) {
         return
       }
-      current_item.reactive_number = current_item.reactive_number - number_of_del_item.value
+      const result = current_item.reactive_number - number_of_del_item.value
+      if (result < 0) {
+        return
+      }
+      current_item.reactive_number = result
       item_del_confirm_show.value = true
       item_content_show.value = false
     }

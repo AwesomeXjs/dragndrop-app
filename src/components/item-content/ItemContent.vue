@@ -25,7 +25,7 @@ const store = useDragNDropStore()
           <input
             v-model.number="store.number_of_del_item"
             class="content_input"
-            type="text"
+            type="number"
             placeholder="Введите количество"
           />
           <div v-if="store.item_del_confirm_show" class="content_buttons">
