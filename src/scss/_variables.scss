@@ -1,19 +1,41 @@
-$accent: #398dc0;
-$accent-light: #59a7d8;
-$accent-dark: #2c719c;
-$background-opacity: rgba(0, 0, 0, 0.7);
-$text: white;
-$special-text: rgb(145, 144, 144);
-$border: #398dc0;
+:root {
+	--var-accent: #398dc0;
+	--var-accent-light: #59a7d8;
+	--var-accent-dark: #2c719c;
+	--var-background-opacity: rgba(0, 0, 0, 0.7);
+	--var-text: white;
+	--var-special-text: rgb(145, 144, 144);
+	--var-border: #4D4D4D;
 
-$regular-text: 16px;
-$small-text: 14px;
-$lineheight: 1.75;
-$userfont: 'Roboto', sans-serif;
-$transition: 0.25s ease-out;
-$index: calc(1vw + 1vh);
-$radius: 20px;
-$radius-style: 0 7px;
+	--var-background-main: #1D1D1D;
+	--var-background-card: #262626;
+
+	--var-btn-danger: #FA7272;
+	--var-btn-primary: #FFFFFF;
+
+	--var-regular-text: 16px;
+	--var-small-text: 14px;
+	--var-lineheight: 1.75;
+	--var-userfont: 'Inter';
+	--var-transition: 0.25s ease-out;
+	--var-index: calc(1vw + 1vh);
+	--var-border-radius: 12px;
+	--var--skeleton-border-radius: 8px;
+	--var-skeleton-text-border-radius: 4px;
+	--var-radius-style: 0 7px;
+
+	--var-bcc-gradient: linear-gradient(to left, #333, #3c3c3c 0%, #444444 50%, #333333 100%);
+
+}
+
+[light] {
+	--var-background-main: #FFFFFF;
+	--var-background-card: #918f8f;
+	--var-text: black;
+}
+
+
+
 
 $breakpoint_hd_plus: 1920px;
 $breakpoint_hd: 1440px;

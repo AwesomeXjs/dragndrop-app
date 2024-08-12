@@ -2,19 +2,22 @@
 @import './_variables';
 
 html {
-	font-size: $regular-text;
+	font-size: var(--var-regular-text);
 }
 
 body {
-	font-family: $userfont;
-	line-height: $lineheight;
-	color: $text;
+	transition: 0.2s ease-out;
+	font-family: var(--var-userfont) , sans-serif;
+	line-height: var(--var-lineheight);
+	color: var(--var-text);
 	min-width: 320px;
 	position: relative;
-	background-color: #05051a;
+	background-color: var(--var-background-main);
 }
 
-/* .container {
-	max-width: 1400px;
-	margin: 0 auto;
-} */
+
+
+ .container {
+	max-width: 785px;
+	margin: 32px auto;
+}
